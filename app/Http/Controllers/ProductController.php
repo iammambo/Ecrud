@@ -27,6 +27,7 @@ class ProductController extends Controller
             200]);
     }
 
+    //tis is it
     public function show()
     {
         return response()->json([
