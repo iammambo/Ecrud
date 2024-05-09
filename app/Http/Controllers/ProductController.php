@@ -21,7 +21,10 @@ class ProductController extends Controller
         ]);
         $product = Product::create($validated);
 
-        return response()->json($product, 200);
+        return response()->json([
+            'status' => true,
+            product => 'product',
+            200]);
     }
 
     public function show()
@@ -50,6 +53,7 @@ class ProductController extends Controller
 
     public function destroy(Product $product)
     {
+
         $product->delete();
 
         return response('Deleted', 200);
